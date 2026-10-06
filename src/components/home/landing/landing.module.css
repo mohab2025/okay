@@ -1,0 +1,53 @@
+.landing{background:#070a0f;color:#f4f5fa;overflow:clip}
+.hero,.agents,.production{max-width:1280px;margin-inline:auto;padding-inline:32px}
+.hero{display:grid;grid-template-columns:.95fr 1.2fr;align-items:center;min-height:570px;gap:40px;padding-block:36px 50px}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.13em;color:#96c5ff;margin-bottom:16px}
+.copy h1{font-size:clamp(38px,4.3vw,62px);line-height:1.06;letter-spacing:-.045em;font-weight:600;max-width:560px}
+.copy h1 span{background:linear-gradient(100deg,#59baff,#8399ff 55%,#a46bff);color:transparent;background-clip:text}
+.intro{font-size:17px;line-height:1.65;max-width:460px;color:#b5c3dc;margin-top:24px}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:11px 20px;border-radius:99px;text-decoration:none;font-size:13px;font-weight:500}
+.primary{color:#101522;background:#f6f7ff;box-shadow:inset 0 -3px 8px #b8c4e933}.secondary{color:#e5eaf8;border:1px solid #728099;background:#080b12}
+.primary:hover{background:#dfe9ff}.secondary:hover{border-color:#b6a3ff}
+.visual{position:relative;min-height:470px}
+.sculpture{position:absolute;inset:0 40px 70px;display:grid;place-items:center;isolation:isolate}
+.sculpture:before{content:"";position:absolute;inset:20%;background:#3769ef;filter:blur(65px);opacity:.27}
+.core{width:80px;height:100px;border-radius:50%;background:radial-gradient(ellipse,#eff1ff 0%,#939dff 16%,#405cd799 48%,transparent 72%);filter:blur(14px)}
+.sculpture i{position:absolute;width:77%;height:85%;border-radius:45% 55% 37% 63% / 40% 42% 58% 60%;border:1px solid #8ca7ff88;background:linear-gradient(140deg,#2868cf03 15%,#5784ed66 27%,#0b173633 38%,#7582ef44 55%,#182c6311 75%);box-shadow:inset 10px 3px 16px #69a1ff44,inset -4px -15px 25px #7760df44;transform:rotateY(48deg) rotateX(20deg);mix-blend-mode:screen}
+.sculpture i:nth-child(even){transform:rotateY(-42deg) rotateX(-15deg);border-radius:61% 39% 54% 46% / 42% 58% 42% 58%}
+.stageButtons{position:absolute;inset:25px 0 120px}
+.stage{position:absolute;display:flex;align-items:center;gap:12px;width:174px;text-align:start;padding:15px;border:1px solid #859cff26;background:linear-gradient(120deg,#171d31ed,#0a0e18ef);border-radius:15px;cursor:pointer;box-shadow:0 12px 35px #0004}
+.stage:nth-child(1){inset-inline-start:0;top:0}.stage:nth-child(2){inset-inline-end:0;top:65px}.stage:nth-child(3){inset-inline-start:0;bottom:0}.stage:nth-child(4){inset-inline-end:0;bottom:-35px}
+.stage[aria-pressed=true]{border-color:#8d9deb;box-shadow:0 0 26px #5a77f022}
+.stage strong{display:block;font-size:13px;font-weight:500}.stage small{display:block;font-size:10px;color:#aebcda;margin-top:3px}.stageIcon{color:#bba2ff}.stageIcon svg{width:21px;height:21px}
+.receipt{position:absolute;bottom:0;inset-inline:20px;border-top:1px solid #7f96d426;padding-top:14px;font-size:12px;color:#b6c3da}.receipt .eyebrow{font-size:9px}.receipt p{margin-block:5px}.receipt>div{display:flex;gap:8px;align-items:baseline;min-height:38px;color:#899ab7;font-size:11px}
+.signal{display:inline-block;flex:none;width:5px;height:5px;border-radius:50%;background:#9c85ff}
+.agents{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:18px;padding-block:35px 65px}.agents header{padding-inline-end:20px}
+.agents h2,.production h2{font-size:29px;line-height:1.2;letter-spacing:-.025em;font-weight:500}
+.agents header>p:not(.eyebrow),.productionCopy>p:not(.eyebrow){color:#aebed8;font-size:14px;line-height:1.65;margin-block:17px}
+.textLink{display:inline-flex;align-items:center;gap:12px;color:#90c4ff;font-size:13px;text-decoration:none}
+.agent{min-width:0;padding:23px 20px;display:flex;flex-direction:column;border:1px solid #78859e20;border-radius:16px;background:linear-gradient(145deg,#141a25,#0b0f16 65%);text-decoration:none;transition:border-color .2s,translate .2s}
+.agent:first-of-type{border-color:#7b92d7;background:radial-gradient(ellipse at top left,#20345388,transparent 70%),#0a0e16;box-shadow:-3px 0 16px #4d9aff15}
+.agent:hover{border-color:#aaa0ec;translate:0 -3px}
+.glyph{display:grid;place-items:center;width:42px;height:42px;border:1px solid #a7a6fe26;border-radius:13px;background:linear-gradient(145deg,#33415d,#161b2c);color:#b9b1ff;margin-bottom:17px}.glyph svg{width:23px;height:23px}
+.agent h3{font-size:15px;font-weight:500}.agent p{font-size:12px;line-height:1.7;color:#adbbd3;margin-block:9px 24px}
+.tags{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:auto;color:#8594b0;font-size:9px}.tags svg{margin-inline-start:auto;width:13px}
+.production{display:grid;grid-template-columns:1.4fr 1fr .5fr;gap:48px;align-items:center;padding-block:30px 70px}
+.console{border:1px solid #6378b733;border-radius:12px;background:linear-gradient(140deg,#101a2e,#090d15 60%);box-shadow:-20px 0 100px #426dcb14;min-width:0;transform:perspective(1100px) rotateY(5deg)}
+.consoleTop,.consoleBottom{display:flex;align-items:center;gap:9px;padding:16px;border-bottom:1px solid #7384ad22;color:#97abc9;font-size:10px}
+.consoleTop span:last-child{margin-inline-start:auto;font-family:monospace}
+.consoleBody{display:flex;min-height:190px}.consoleBody ol{list-style:none;margin:0;padding:24px 12px;min-width:70px;font-size:10px;color:#8293b0;border-inline-end:1px solid #7384ad22}
+.consoleBody li{display:flex;align-items:center;gap:8px;margin-bottom:16px}.consoleBody li[data-active=true]{color:#bdd9ff}
+.console pre{overflow:auto;min-width:0;padding:25px 12px;margin:0;font:10px/1.9 var(--font-mono),monospace;color:#96a7ed}.console pre span[data-active=true]{color:#cedfff}
+.consoleBottom{border-bottom:0;border-top:1px solid #7384ad22;justify-content:space-between;min-height:60px}.consoleBottom button{background:#182542;color:#c9dbff;border:1px solid #52678b;border-radius:8px;padding:8px;cursor:pointer;font-size:10px;min-height:36px}.consoleBottom button:disabled{opacity:.5;cursor:wait}
+.partners{display:flex;flex-wrap:wrap;gap:20px;margin-top:28px;color:#7f8ca5;font-size:14px}
+.pillars{border-inline-start:1px solid #7086b022;padding-inline-start:26px;display:grid;gap:26px}.pillars strong{display:block;font-size:22px;font-weight:500}.pillars span{font-size:11px;color:#9baac4}
+.closing{text-align:center;padding:52px 24px 95px;background:linear-gradient(#070a0f66,#070a0f22),url('/atmosphere/night-horizon.jpg') center 65%/cover;border-top:1px solid #879ab620;min-height:280px}
+.closing h2{font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:-.02em}.closing>p:not(.eyebrow){font-size:14px;color:#c2cce2;margin:12px auto 22px}.closing .eyebrow{font-size:9px;margin-bottom:9px}
+:global(html[lang=ar]) .eyebrow{letter-spacing:0}:global(html[lang=ar]) .copy h1{line-height:1.35;letter-spacing:0}:global(html[lang=ar]) .console{transform:none}:global(html[lang=ar]) .agent p{line-height:1.9}
+@media(min-width:1100px){.sculpture{animation:breathe 9s ease-in-out 2 alternate}}
+@keyframes breathe{to{translate:0 -8px;scale:1.025}}
+@media(max-width:1100px){.agents{grid-template-columns:repeat(4,1fr)}.agents header{grid-column:1/-1;max-width:440px}.production{grid-template-columns:1.3fr 1fr;gap:30px}.pillars{grid-column:1/-1;grid-template-columns:repeat(3,1fr);border-inline-start:0;border-top:1px solid #7086b022;padding:20px 0 0}.hero{gap:16px}.stage{width:150px;padding:12px}}
+@media(max-width:760px){.hero,.agents,.production{padding-inline:22px}.hero{grid-template-columns:1fr;padding-top:38px;gap:24px}.copy h1{max-width:530px}.visual{min-height:420px}.sculpture{inset:0 35px 85px}.agents{grid-template-columns:repeat(2,1fr);gap:12px;padding-bottom:35px}.production{grid-template-columns:1fr;padding-top:25px}.productionCopy{max-width:480px}.console{transform:none}.pillars{grid-template-columns:repeat(3,1fr);gap:14px}.pillars strong{font-size:17px}.pillars span{font-size:10px}.agent{padding:18px 15px}.closing{padding-bottom:75px}.stage{width:145px}.consoleTop{flex-wrap:wrap}.consoleTop span:last-child{display:none}}
+@media(max-width:370px){.hero,.agents,.production{padding-inline:16px}.stage{width:128px;padding:10px;gap:8px}.stage small{font-size:9px}.visual{min-height:435px}.agent{padding:14px 11px}.agent h3{font-size:13px}.tags{gap:6px}.console pre{font-size:9px}.pillars{grid-template-columns:1fr;gap:16px}.receipt{inset-inline:0}}
+@media(prefers-reduced-motion:reduce){.sculpture{animation:none}.agent{transition:none}.agent:hover{translate:none}}

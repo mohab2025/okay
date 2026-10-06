@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Okay — AI agents that get the work done",
+    "description": "We build intelligent systems that understand your business, work across your tools, and execute real workflows from beginning to end."
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "header": {
+    "home": "Home"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "ar": "Arabic",
+    "short": {
+      "en": "EN",
+      "ar": "العربية"
+    }
+  },
+  "nav": {
+    "label": "Primary",
+    "product": "Product",
+    "solutions": "Solutions",
+    "agents": "AI Agents",
+    "howItWorks": "How It Works",
+    "technology": "Technology",
+    "industries": "Industries",
+    "company": "Company",
+    "resources": "Resources"
+  },
+  "actions": {
+    "accountLabel": "Account",
+    "signIn": "Sign In",
+    "getStarted": "Start with an idea",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuLabel": "Menu"
+  },
+  "footer": {
+    "label": "Footer",
+    "navLabel": "Pages",
+    "summary": "From your first idea to an intelligent product, launch, and growth. Built together.",
+    "rights": "All rights reserved."
+  },
+  "foundation": {
+    "eyebrow": "Foundation",
+    "title": "One system. Two directions.",
+    "lede": "Tokens, type, and components are defined once. English and Arabic reuse them. Writing direction follows the locale.",
+    "signalsLabel": "Disciplines",
+    "actionsLabel": "Actions",
+    "primary": "Primary action",
+    "secondary": "Secondary"
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page is not available.",
+    "body": "The address does not match a page in this foundation."
+  }
+}

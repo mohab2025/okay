@@ -1,0 +1,27 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main {
+  flex: 1;
+  outline: none;
+  padding-block-start: var(--header-offset);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .main {
+    animation: page-enter 420ms var(--ease-out) both;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

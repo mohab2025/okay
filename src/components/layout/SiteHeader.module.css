@@ -1,0 +1,313 @@
+.shell {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  z-index: var(--z-header);
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: var(--header-offset);
+  view-transition-name: var(--vt-header);
+}
+
+.surface {
+  height: 100%;
+  border-block-end: 1px solid transparent;
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition:
+    background-color var(--duration-menu) var(--ease-standard),
+    border-color var(--duration-menu) var(--ease-standard),
+    backdrop-filter var(--duration-menu) var(--ease-standard);
+}
+
+.solid {
+  border-block-end-color: var(--color-border);
+  background-color: color-mix(in srgb, var(--color-bg) 78%, transparent);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: calc(var(--header-height) - 1px);
+  margin-block-start: env(safe-area-inset-top, 0px);
+}
+
+.brand {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 2.75rem;
+  color: var(--color-text);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  text-decoration: none;
+}
+
+.wordmark {
+  font-family: var(--font-latin), sans-serif;
+}
+
+.mark {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-muted);
+}
+
+.desktopNav {
+  display: none;
+  min-width: 0;
+}
+
+.desktopList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  list-style: none;
+}
+
+.desktopLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding-inline: 0.45rem;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.desktopLink::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.45rem;
+  inset-block-end: 0.3rem;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.desktopLink:hover {
+  color: var(--color-text);
+}
+
+.desktopCurrent {
+  color: var(--color-text);
+}
+
+.desktopCurrent::after {
+  transform: scaleX(1);
+}
+
+.tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.signIn,
+.getStarted {
+  display: none;
+}
+
+.signIn {
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.signIn:hover,
+.signInCurrent {
+  color: var(--color-text);
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: var(--color-surface);
+}
+
+.menuIcon {
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.menuIcon svg {
+  position: absolute;
+  inset: 0;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.menuIcon svg:last-child {
+  opacity: 0;
+}
+
+.menuIcon[data-open="true"] svg:first-child {
+  opacity: 0;
+}
+
+.menuIcon[data-open="true"] svg:last-child {
+  opacity: 1;
+}
+
+.panel {
+  position: fixed;
+  z-index: calc(var(--z-header) - 1);
+  inset-inline: 0;
+  inset-block-start: var(--header-offset);
+  inset-block-end: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--color-bg);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity var(--duration-menu) var(--ease-standard),
+    visibility var(--duration-menu) var(--ease-standard);
+}
+
+.panel[data-open="true"] {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.panel:focus {
+  outline: none;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-block-start: var(--space-4);
+}
+
+.menuLink,
+.menuSignIn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 3.25rem;
+  padding-inline: var(--space-2);
+  border-block-end: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+  text-decoration: none;
+}
+
+.menuCurrent::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block: 0.7rem;
+  width: 2px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.menuActions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-3);
+  padding-block: var(--space-6) var(--space-7);
+}
+
+.menuSignIn {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  justify-content: center;
+}
+
+.menuActions :global(a) {
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .panel[data-open="true"] .menuList > li {
+    animation: menu-in 280ms var(--ease-out) both;
+  }
+
+  .panel[data-open="true"] .menuList > li:nth-child(2) { animation-delay: 24ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(3) { animation-delay: 48ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(4) { animation-delay: 72ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(5) { animation-delay: 96ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(6) { animation-delay: 120ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(7) { animation-delay: 144ms; }
+  .panel[data-open="true"] .menuList > li:nth-child(8) { animation-delay: 168ms; }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    translate: 0 6px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .desktopNav {
+    display: block;
+    flex: 1;
+  }
+
+  .signIn,
+  .getStarted {
+    display: inline-flex;
+  }
+
+  .menuButton {
+    display: none;
+  }
+
+  .panel {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.icon {
+  display: block;
+  flex: none;
+}
+
+.directional {
+  display: block;
+  flex: none;
+}
+
+:global(html[dir="rtl"]) .directional {
+  transform: scaleX(-1);
+}

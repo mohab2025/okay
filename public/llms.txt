@@ -1,0 +1,24 @@
+# Okay
+
+> Okay develops software, AI agents, and business automation, with product discovery, specialist review, deployment, and marketing support.
+
+Official website: https://okai.sa
+Primary language: Arabic. English content is also available.
+
+## Start here
+- [Arabic overview](https://okai.sa/ar): idea-to-launch journey, agent workflow examples, controls, and working models.
+- [English overview](https://okai.sa/en): English version of the same offering.
+- [How we work](https://okai.sa/ar/how-it-works): discovery, specialist review, prototype, build, launch, and growth.
+- [Agents](https://okai.sa/ar/agents): representative specialized agent workflows.
+- [Technology](https://okai.sa/ar/technology): development simulation, integration approaches, and deployment controls.
+- [Company](https://okai.sa/ar/company): project delivery, partnership, and our business-incubator vision.
+- [Questions](https://okai.sa/ar/resources): answers about scope, integration, and partnership.
+
+## Scope and qualifications
+Project delivery follows agreed scope and milestones. Partnership is subject to assessment and an agreement defining contributions, ownership, and returns; it targets lower upfront cost in exchange for shared risk. No success guarantee is offered.
+
+Becoming a business incubator is a vision, not a current certification or accredited status.
+
+All interface demonstrations are representative simulations, not customer case studies. Integration requires reviewing interfaces, permissions, and data. Security controls are design considerations, not claims of certification.
+
+The idea brief tool is a local prototype. It does not contact an AI model, send submissions to a server, or book specialist sessions.

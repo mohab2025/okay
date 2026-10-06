@@ -1,0 +1,65 @@
+[data-atmosphere] {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--color-bg);
+}
+
+[data-atmosphere]::before,
+[data-atmosphere]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+[data-atmosphere] > * {
+  position: relative;
+  z-index: 1;
+}
+
+[data-atmosphere="ink"] {
+  background-color: #05060a;
+}
+
+[data-atmosphere="ink"]::before {
+  background:
+    radial-gradient(70% 55% at 0% 100%, rgba(98, 78, 196, 0.16), transparent 58%),
+    radial-gradient(40% 30% at 100% 0%, rgba(80, 110, 220, 0.08), transparent 70%);
+}
+
+[data-atmosphere="raised"] {
+  background-color: #101526;
+}
+
+[data-atmosphere="raised"]::before {
+  background:
+    radial-gradient(80% 70% at 100% 0%, rgba(126, 148, 255, 0.22), transparent 56%),
+    radial-gradient(50% 40% at 0% 100%, rgba(92, 70, 190, 0.12), transparent 62%);
+}
+
+[data-atmosphere="light"]::before {
+  background:
+    radial-gradient(48% 62% at 86% 12%, rgba(132, 154, 255, 0.42), transparent 62%),
+    url("/atmosphere/hero-light.jpg") right top / cover no-repeat;
+}
+
+[data-atmosphere="light"]::after {
+  background: linear-gradient(to bottom, transparent 55%, var(--color-bg) 100%);
+}
+
+[data-atmosphere="horizon"] {
+  background-color: #070814;
+}
+
+[data-atmosphere="horizon"]::before {
+  background:
+    linear-gradient(to bottom, #07080c 0%, rgba(7, 8, 12, 0.72) 28%, rgba(7, 8, 12, 0.28) 68%, rgba(7, 8, 12, 0.45) 100%),
+    url("/atmosphere/night-horizon.jpg") center bottom / cover no-repeat;
+}
+
+html[dir="rtl"] [data-atmosphere="light"]::before,
+html[dir="rtl"] [data-atmosphere="raised"]::before,
+html[dir="rtl"] [data-atmosphere="ink"]::before {
+  transform: scaleX(-1);
+}
